@@ -1,0 +1,93 @@
+@import "./conming.scss";
+.nav {
+    z-index: 10;
+    position: absolute;
+    height: pr(65);
+    width: 100%;
+    background-color: #d3d3d3;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:nth-child(3) {
+            width: pr(66);
+            height: pr(47);
+            img {
+                width: 100%;
+            }
+        }
+        img {
+            width: pr(33);
+            height: pr(34);
+            margin-top: pr(6);
+        }
+        p {
+            margin-top: pr(5);
+            font-size: pr(14);
+        }
+    }
+}
+// 轮播图
+.swiper-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .guanzhu {
+        .swiper-container2 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            .swiper-slide {
+                height: auto;
+                padding-bottom: pr(65);
+                padding-top: pr(90);
+            }
+        }
+    }
+    .order {
+        .swiper-container1 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            .swiper-slide {
+                height: auto;
+                padding-bottom: pr(65);
+                padding-top: pr(90);
+            }
+        }
+    }
+    // 小点点
+    .swiper-pagination {
+        width: 100%;
+        height: pr(90);
+        display: flex;
+        position: absolute;
+        top: 0;
+        justify-content: space-around;
+        background-color: #fff;
+        padding-top: pr(30);
+        .swiper-pagination-bullet {
+            width: pr(131);
+            height: pr(60);
+            background: #fff;
+            border-radius: 0;
+            &:nth-child(1)::before {
+                content: "关注";
+                display: inline-block;
+            }
+            &:nth-child(2)::before {
+                content: "订阅";
+                display: inline-block;
+            }
+        }
+        .swiper-pagination-bullet-active {
+            box-shadow: 0 -3px 0 green inset;
+        }
+    }
+}

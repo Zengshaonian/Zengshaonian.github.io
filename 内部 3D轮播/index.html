@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <script src="./lib/swiper/swiper.min.js"></script>
+
+</head>
+
+<script>
+    var screenWidth = window.screen.width;
+    document.querySelector("html").style.fontSize = screenWidth >= 414 ? "41.4px" : (screenWidth / 10 + "px");
+</script>
+
+<body>
+    <!-- 底部 -->
+    <div class="nav">
+        <a href="">
+            <img src="./img/01-app-icons/01.png" alt="">
+            <p>首页</p>
+        </a>
+        <a href="./find.html">
+            <img src="./img/01-app-icons/02.png" alt="">
+            <p>发现</p>
+        </a>
+        <a href="">
+            <img src="./img/01-app-icons/03.png" alt="">
+
+        </a>
+        <a href="">
+            <img src="./img/01-app-icons/04.png" alt="">
+            <p>消息</p>
+        </a>
+        <a href="">
+            <img src="./img/01-app-icons/05.png" alt="">
+            <p>我的</p>
+        </a>
+    </div>
+    <!-- 轮播图 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide guanzhu">
+                
+                <div class="swiper-container2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide order">
+
+                <div class="swiper-container1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="swiper-pagination"></div>
+        </div>
+
+
+</body>
+
+</html>
+<script>
+    $(function () {
+        $.ajax({
+            url: "./order.html",
+            success: function (backdata) {
+                $('.order .swiper-slide ').html(backdata);
+                var swiper1 = new Swiper('.swiper-container1', {
+                    direction: 'vertical',
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                    mousewheel: true,
+                });
+
+            }
+
+        })
+        
+        $.ajax({
+            url: "./guanzhu.html",
+            success: function (backdata) {
+                $('.guanzhu .swiper-slide ').html(backdata);
+                var swiper2 = new Swiper('.swiper-container2', {
+                    direction: 'vertical',
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                    mousewheel: true,
+                });
+
+            }
+
+        })
+    })
+   
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination'
+      }
+    
+    });
+</script>

@@ -1,0 +1,103 @@
+@import "./conming.scss";
+body {
+    background-color: #fff;
+}
+.nav {
+    z-index: 10;
+    position: absolute;
+    height: pr(65);
+    width: 100%;
+    background-color: #d3d3d3;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &:nth-child(3) {
+            width: pr(66);
+            height: pr(47);
+            img {
+                width: 100%;
+            }
+        }
+        img {
+            width: pr(33);
+            height: pr(34);
+            margin-top: pr(6);
+        }
+        p {
+            margin-top: pr(5);
+            font-size: pr(14);
+            margin-bottom: pr(0);
+        }
+    }
+}
+
+.swiper-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .swiper-slide {
+        height: auto;
+    }
+}
+
+.vlaue1 {
+    position: relative; // height: pr(40);
+    // width: 100%;
+    // background-color: red;
+    padding: pr(10);
+    input {
+        width: 100%;
+        height: pr(40);
+        background-color: #999;
+        border: none;
+        outline: none;
+        border-radius: pr(5);
+        padding-left: pr(40)
+    }
+    .glass {
+        width: pr(25);
+        height: pr(25);
+        position: absolute;
+        top: pr(17);
+        left: pr(20);
+    }
+    .user {
+        width: pr(25);
+        height: pr(25);
+        position: absolute;
+        top: pr(17);
+        right: pr(20);
+    }
+}
+
+.ddd {
+    width: 100%;
+    .swiper-container3 {
+        width: 100%;
+        .swiper-slide {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding-bottom:pr(65);
+            img {
+                width: 50%;
+            }
+            p {
+                width: 100%;
+                text-align: center;
+                height: pr(80);
+                line-height: pr(80);
+                color: #666;
+                background: #fff;
+            }
+        }
+    }
+}

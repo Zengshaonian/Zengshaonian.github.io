@@ -1,0 +1,93 @@
+@import "./conming.scss";
+
+.top {
+    
+    display: flex;
+    justify-content: space-between;
+    padding: pr(0) pr(20);
+    align-items: center;
+    img {
+        width: pr(60);
+        height: pr(60);
+        border-radius: 50%;
+    }
+    .day {
+        color: #666;
+    }
+    .left {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .aihao {
+            padding-left: pr(20);
+            font-size: 20px;
+        }
+    }
+    P {
+        font-size: pr(16)
+    }
+}
+
+.gudan {
+    display: flex;
+    width: 100%;
+    height: pr(65);
+    p {
+        width: 100%;
+        font-size: pr(24);
+        color: #666;
+        text-align: center;
+        line-height: pr(65)
+    }
+}
+
+.banner {
+    padding: pr(0) pr(15);
+    width: 100%;
+    a {
+        width: 100%;
+        img {
+            width: 100%;
+            padding-bottom: pr(10);
+        }
+    }
+}
+.duanluo{
+    box-sizing:border-box;
+    padding: pr(0) pr(30);
+    .gudan1{
+        font-size: pr(15);
+        color:#666;
+    }
+}
+.zhuanzai{
+    padding: pr(7) pr(30);
+    font-size: pr(18);
+    color: #333;
+    img{
+        width: pr(24);
+        height: pr(24);
+        display: inline-block;
+    }
+}
+.jinhao{
+    padding: pr(7) pr(0);
+    margin: pr(0) pr(18);
+    text-align: center;
+    font-size: pr(18);
+    color: #999;
+    border-bottom: 1px solid #666;
+    span{
+        font-size: pr(24);
+        color: #999;
+    }
+}
+.imgs{
+    margin-top:pr(10);
+    padding:0 pr(20);
+    img{
+    width:pr(26);
+    height: pr(26); 
+    padding-left: pr(6) ;
+    }
+}
